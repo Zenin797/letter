@@ -5,7 +5,7 @@ body {
 
 .animation-box {
   width: 75%;
-  height: 27.5rem;
+  height: 35rem;
   background-color: rgb(0, 0, 0);
   margin: 0 auto;
   overflow: hidden;
@@ -18,7 +18,7 @@ body {
 }
 
 .first-text {
-  font-size: 4.4rem;
+  font-size: 4.3rem;
   position: absolute;
   left: 2.5rem;
   top: 5rem;
@@ -40,7 +40,7 @@ body {
 }
 
 .third-text {
-  transform: rotate(-90deg);
+  transform: rotate(90deg);
   font-size: 2rem;
   position: absolute;
   left: 45%;
@@ -61,7 +61,7 @@ body {
   opacity: 0;
   color: #f0a3be;
   animation-name: fadeInOut;
-  animation-delay: 8.5s;
+  animation-delay: 12s;
   animation-duration: 9s;
 }
 
@@ -73,7 +73,18 @@ body {
   opacity: 0;
   color: #f0eba3;
   animation-name: bottomFadeOut;
-  animation-delay: 10s;
+  animation-delay: 18s;
+  animation-duration: 9s;
+}
+.sixth-text {
+  font-size: 5rem;
+  position: absolute;
+  left: 5%;
+  bottom: 25%;
+  opacity: 0;
+  color: #f0eba3;
+  animation-name: bottomFadeOut;
+  animation-delay: 27s;
   animation-duration: 9s;
 }
 
