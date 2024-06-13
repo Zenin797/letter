@@ -104,10 +104,10 @@ body {
   left: 20px;
   transform: rotate(-45deg);
   box-shadow: -5px 10px 90px red;
-  animation: untoldcoding 0.8s linear infinite;
+  animation: devin 0.8s linear infinite;
 }
 
-@keyframes untoldcoding {
+@keyframes devin {
   0% {
     transform: rotate(-45deg) scale(1.05);
   }
@@ -135,4 +135,8 @@ body {
   background-color: red;
   right: -40px;
   border-radius: 50px;
+}
+.clickable-link {
+  position: relative;
+  z-index:  4;
 }
