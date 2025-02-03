@@ -72,7 +72,7 @@ body {
   left: 10px;
   transition: 0.2s;
 }
-.envelope:hover .letter {
+.envelope.open .letter {
   transform: translateY(-170px);
   z-index: 2;
 }

@@ -28,6 +28,16 @@
       <div class="text1">
         <h2>Hey! Listen I Have Something For You</h2>
       </div>
-    </div>  
+    </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const envelope = document.querySelector('.envelope');
+        envelope.addEventListener('click', function() {
+          envelope.classList.toggle('open');
+        });
+      });
+    </script>
+    
   </body>
 </html>
