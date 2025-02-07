@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Wellness App</title>
+    <link rel="stylesheet" href="dstyles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <button class="nav-btn" onclick="showSection('health')">Health & Nutrition</button>
+        <button class="nav-btn" onclick="showSection('music')">Music Therapy</button>
+        <button class="nav-btn" onclick="showSection('study')">Study Resources</button>
+    </div>
+
+    <!-- Health Section -->
+    <div id="health" class="section">
+        <h2>Health & Wellness</h2>
+        <div class="sub-category">
+            <h3>Meditation Exercises</h3>
+            <div>
+                <ul>
+                    <li>
+                        <a href="https://meditofoundation.org/meditations/introduction-to-meditation">Introduction to Meditation</a>
+                    </li>
+                    <li>
+                        <a href="https://meditofoundation.org/meditations/meditation-for-stress-anxiety">Meditation for Stress and Anxiety</a>
+                    </li>
+                    <li>
+                        <a href="https://meditofoundation.org/meditations/meditation-for-sleep">Meditation for Sleep</a>
+                    </l>
+                <li><a href="https://meditofoundation.org/meditations">Click here for more</a></li>
+            </div>
+        </div>
+        <div class="sub-category">
+            <h3>Recipes</h3>
+            <div>
+                <h4>Chocolaty Treats</h4>
+                <ul>
+                    <li><a href="https://youtu.be/N6IOJM0eoLo?si=qmc3kQhqCAEQn8Ua">For Cravings</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Period-Friendly Tips</h4>
+                <ul>
+                    <li>
+                        <a href="https://www.healthline.com/health/womens-health/what-to-eat-during-period">What to eat and what not to eat</a>
+                    </li>
+                    <li>
+                        <a href="https://www.wikihow.com/Enjoy-Periods">How to enjoy your periods rather than hating them(ik it's a bit streched but you get the idea right?)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Music Section -->
+    <div id="music" class="section">
+        <h2>Music Therapy</h2>
+        <div>
+            <input type="text" id="song-link" placeholder="Enter YouTube/Spotify link">
+            <button onclick="addToPlaylist()">Add to Playlist</button>
+        </div>
+        <div id="playlist">
+            <a href="https://open.spotify.com/playlist/0I1fm5fa5z27mjipyUT46Y?si=ulYpZfOCS7yZHZehi7zvkw&pi=SVcSZ3PwQPCX8">One of your favorites for now</a>
+        </div>
+        <!-- <div id="music-player">
+            <iframe id="player" width="100%" height="200" src="https://www.youtube.com/embed/" 
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div> -->
+    </div>
+
+    <!-- Study Section -->
+    <div id="study" class="section">
+        <h2>Class 12 Commerce Study Resources</h2>
+        <div class="sub-category">
+            <ul>
+                <li><a href="https://www.selfstudys.com/books/cbse-sample-paper">Sample Papers</a></li>
+                <li><a href="https://www.selfstudys.com/books/cbse-prev-paper/english/class-12-chapter-wise">Upto 15 years Previous Year Questions(Chapter-Wise)</a></li>
+                <li><a href="https://www.vedantu.com/cbse/class-12-marking-scheme">Marking Scheme and Syllabus</a>
+                </li>
+                <li>
+                    <a href="https://youtu.be/PTtELo7mj1M?feature=shared">Board Paper Checking Process</a>
+                </li>
+                <li><a href="https://www.selfstudys.com/books/cbse-revisions-notes">Subject Wise Revision Notes</a></li>
+            </ul>
+        </div>
+        <!-- Repeat for other subjects -->
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        // Music Player Functionality
+        let playlist = [];
+        let currentTrack = 0;
+
+        function addToPlaylist() {
+            const link = document.getElementById('song-link').value;
+            if (link) {
+                playlist.push(link);
+                const playlistDiv = document.getElementById('playlist');
+                playlistDiv.innerHTML += `<div>${link}</div>`;
+            }
+        }
+
+        // YouTube Player API
+        let player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
+    </script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>
