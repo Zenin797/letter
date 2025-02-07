@@ -116,7 +116,7 @@ body {
   animation-delay: 39s;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 430px) {
   .first-text {
     font-size: 2rem; /* Adjust font size for smaller screens */
   }
