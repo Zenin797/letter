@@ -116,6 +116,29 @@ body {
   animation-delay: 39s;
 }
 
+@media (max-width: 768px) {
+  .first-text {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+  .second-text {
+    font-size: 2rem;
+  }
+  .third-text {
+    font-size: 1.5rem;
+  }
+  .fourth-text {
+    font-size: 1.5rem;
+  }
+  .fifth-text, .sixth-text {
+    font-size: 2.5rem;
+  }
+  .wish1 {
+    font-size: 1.2rem;
+  }
+  
+}
+
+
 @keyframes topFadeOut {
   0% {
     position: absolute;
